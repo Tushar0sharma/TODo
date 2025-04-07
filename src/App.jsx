@@ -7,7 +7,7 @@ import Button from './component/todobtn.jsx';
 function App() {
   return (
     <TodoProvider>
-      <div className='flex items-center justify-start flex-col min-h-screen bg-grey-200'>
+      <div className='flex items-center justify-start flex-col '>
        <div className='m-4'>
         <Button/>
        </div>

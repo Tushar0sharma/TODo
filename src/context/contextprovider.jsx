@@ -2,7 +2,6 @@ import { useState,useEffect } from "react";
 import { TodoContext } from "./contextapi";
 export const TodoProvider = ({ children }) => {
     const [todos, setTodos] = useState([]);
-    const [selectedList, setSelectedList] = useState('main');
   
     useEffect(() => {
       const savedTodos = JSON.parse(localStorage.getItem('todos'));
@@ -49,12 +48,10 @@ export const TodoProvider = ({ children }) => {
       <TodoContext.Provider
         value={{
           todos,
-          selectedList,
           addTodo,
           editTodo,
           deleteTodo,
           toggleComplete,
-          setSelectedList,
         }}
       >
         {children}
