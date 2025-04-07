@@ -6,7 +6,6 @@ const List = () => {
   const [editedText, setEditedText] = useState('');
   const [editingTodoId, setEditingTodoId] = useState(null);
 
-  const todoRef = useRef(null); 
   const handleEditClick = (todo) => {
     setEditingTodoId(todo.id);
     setEditedText(todo.text);
@@ -37,7 +36,6 @@ const List = () => {
           {todos.map((todo) => (
             <div
               key={todo.id}
-              ref={todoRef}
               className={`flex items-center justify-between border border-gray-300 rounded-lg pl-4 py-3 gap-4 mb-4 shadow-sm bg-white hover:bg-gray-100 duration-300 text-gray-700`}
             >
               <div className="flex items-center">
